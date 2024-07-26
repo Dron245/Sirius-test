@@ -1,10 +1,61 @@
-<div id="popup" aria-hidden="true" class="popup">
+<!-- @format -->
+
+<div id="add" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
-				Popup content
+			<div class="popup__top">
+				<h3 class="popup__title">Выбор опций</h3>
+				<button data-close type="button" class="popup__close">
+					<img src="@img/close-options.svg" alt="Закрыть" />
+				</button>
 			</div>
+			<div class="popup__body">
+				<div class="popup__item">
+					<p class="popup__text">Размер 104-108, Рост 170-176 (Арт. 43585)</p>
+					<div data-quantity class="popup__quantity quantity">
+						<button
+							data-quantity-plus
+							type="button"
+							class="quantity__button quantity__button_plus"
+						>
+							+
+						</button>
+						<div class="quantity__input">
+							<input data-quantity-value type="text" name="" value="0" />
+						</div>
+						<button
+							data-quantity-minus
+							type="button"
+							class="quantity__button quantity__button_minus"
+						>
+							-
+						</button>
+					</div>
+				</div>
+				<div class="popup__item">
+					<p class="popup__text">Размер 104-108, Рост 170-176 (Арт. 43585)</p>
+					<div data-quantity class="popup__quantity quantity">
+						<button
+							data-quantity-plus
+							type="button"
+							class="quantity__button quantity__button_plus"
+						>
+							+
+						</button>
+						<div class="quantity__input">
+							<input data-quantity-value type="text" name="" value="0" />
+						</div>
+						<button
+							data-quantity-minus
+							type="button"
+							class="quantity__button quantity__button_minus"
+						>
+							-
+						</button>
+					</div>
+				</div>
+			</div>
+			<button type="button" class="popup__button">Добавить в корзину</button>
 		</div>
 	</div>
 </div>

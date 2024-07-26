@@ -1,4 +1,103 @@
+<!-- @format -->
+
 <header class="header">
 	<div class="header__container">
+		<div class="header__top">
+			<a href="#" class="header__logo">
+				<img src="@img/header/logo.svg" alt="Сириус" />
+			</a>
+			<div class="header__city city">
+				<p class="city__text">Выберите ваш город:</p>
+				<div class="city__current">
+					<div class="city__img">
+						<img src="@img/header/punkt.svg" alt="Тек. пункт" />
+						<a href="#" class="city__link">Санкт-Петербург</a>
+					</div>
+				</div>
+			</div>
+			<div class="header__search search">
+				<form action="#" class="search__wrapper">
+					<img src="@img/header/search.svg" alt="Поиск" />
+					<input
+						id="search"
+						autocomplete="off"
+						type="text"
+						placeholder="Поиск"
+						class="search__input input"
+					/>
+				</form>
+			</div>
+			<div class="header__mode mode">
+				<p class="mode__text">
+					Режим работы <br />
+					Пн-Пт с 8:00 — 18:00
+				</p>
+			</div>
+			<div class="header__social social">
+				<div class="social__item">
+					<a href="#" class="social__link">
+						<img src="@img/header/facebook.svg" alt="facebook" />
+					</a>
+					<a href="#" class="social__link">
+						<img src="@img/header/insta.svg" alt="instagramm" />
+					</a>
+					<a href="#" class="social__link">
+						<img src="@img/header/vk.svg" alt="vk" />
+					</a>
+				</div>
+			</div>
+			<div class="header__contacts contacts">
+				<div class="contacts__item">
+					<p class="contacts__text">г. Москва</p>
+					<a href="tel:+74957772345" class="contacts__link">+7(495)777-2345</a>
+					<button type="button" class="contacts__button">Заказать звонок</button>
+				</div>
+				<div class="contacts__item">
+					<p class="contacts__text">г. Ногинск</p>
+					<a href="tel:+74956004400" class="contacts__link">+7 (495) 600-4400</a>
+					<button type="button" class="contacts__button">Заказать звонок</button>
+				</div>
+			</div>
+		</div>
+		<div class="header__bottom">
+			<div class="header__catalog catalog">
+				<div class="catalog__img"><img src="@img/header/menu.svg" alt="Меню" /></div>
+				<span class="catalog__text">Каталог</span>
+			</div>
+			<div class="header__menu menu">
+				<button type="button" class="menu__icon icon-menu"><span></span></button>
+				<nav class="menu__body">
+					<ul class="menu__list">
+						<li class="menu__item"><a href="#" class="menu__link">Новости</a></li>
+						<li class="menu__item"><a href="#" class="menu__link">О компании</a></li>
+						<li class="menu__item"><a href="#" class="menu__link">Скидки</a></li>
+						<li class="menu__item">
+							<a href="#" class="menu__link">Доставка и оплата</a>
+						</li>
+						<li class="menu__item"><a href="#" class="menu__link">Услуги</a></li>
+						<li class="menu__item"><a href="#" class="menu__link">Дилеры</a></li>
+						<li class="menu__item"><a href="#" class="menu__link">Магазины</a></li>
+						<li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+						<li class="menu__item">
+							<a href="#" class="menu__link menu__link_other">Честный знак</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="header__actions actions">
+				<a href="#" class="actions__item">
+					<img src="@img/header/facebook.svg" alt="Избранное" />
+					<span class="actions__quantiy">0</span>
+				</a>
+				<a href="#" class="actions__item">
+					<img src="@img/header/cart.svg" alt="Корзина" />
+					<span class="actions__quantiy">0</span>
+				</a>
+				<a href="#" class="actions__item">
+					<img src="@img/header/user.svg" alt="Корзина" />
+					<p class="actions__text">Войти</p>
+				</a>
+			</div>
+		</div>
 	</div>
 </header>

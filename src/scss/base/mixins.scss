@@ -10,6 +10,11 @@
 		font-style: #{$style};
 	}
 }
+
+@mixin adimg {
+	width: 100%;
+	height: auto;
+}
 //Percent
 @function percent($px, $from: 100) {
 	$result: math.div($px, $from) * 100%;

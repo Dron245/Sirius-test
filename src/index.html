@@ -1,16 +1,997 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	@@include('html/_head.htm',{
-	"title":"HomePage"
-	})
+	@@include('html/_head.htm',{ "title":"HomePage" })
 	<body>
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
-			<main class="page">
-				
+			<main class="catalog">
+				<div style="display: none;" class="catalog__container">
+					<nav class="catalog__breadcrumbs breadcrumbs">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item">
+								<a href="#" class="breadcrumbs__link">Каталог товаров ></a>
+							</li>
+							<li class="breadcrumbs__item">
+								<a href="#" class="breadcrumbs__link">Спецодежда ></a>
+							</li>
+							<li class="breadcrumbs__item">
+								<span class="breadcrumbs__current">Спецодежда зимняя</span>
+							</li>
+						</ul>
+					</nav>
+					<a href="#" class="catalog__back">
+						<img src="@img/arrow-filter.svg" alt="" />
+						<span>Назад</span>
+					</a>
+					<h1 class="catalog__title">Спецодежда Зимняя</h1>
+					<section class="catalog__tags tags">
+						<button type="button" class="tags__item">
+							Спецодежда с заключением Минпромторга
+						</button>
+						<button type="button" class="tags__item">Костюмы женские</button>
+						<button type="button" class="tags__item">Костюмы мужские</button>
+						<button type="button" class="tags__item">Костюмы сварщика</button>
+						<button type="button" class="tags__item">Жилеты женские</button>
+						<button type="button" class="tags__item">Жилеты мужские</button>
+						<button type="button" class="tags__item">Жилеты зимние</button>
+						<button type="button" class="tags__item">Брюки</button>
+						<button type="button" class="tags__item">Куртки женские</button>
+						<button type="button" class="tags__item">Куртки мужские</button>
+						<button type="button" class="tags__item">Полукомбинезоны зимние</button>
+						<button type="button" class="tags__item">Показать еще</button>
+					</section>
+					<section class="catalog__master master">
+						<div class="master__sort sort">
+							<div class="sort__title">
+								<span class="sort__text">По возрастанию цены</span>
+								<img src="@img/arrow-sort.svg" alt="" />
+							</div>
+							<ul class="sort__menu">
+								<li class="sort__item">По умолчанию</li>
+								<li class="sort__item">По популярности</li>
+								<li class="sort__item">По возрастанию цены</li>
+								<li class="sort__item">По убыванию цены</li>
+								<li class="sort__item">По новинкам</li>
+								<li class="sort__item">По скидке</li>
+								<li class="sort__item">По алфавиту</li>
+							</ul>
+						</div>
+						<button class="sort__button" type="button">
+							<img src="@img/filter-m-button.svg" alt="открыть фильтры" />
+							Фильтр
+						</button>
+						<aside class="master__filters filters">
+							<button type="button" class="filters__close">
+								<img src="@img/close.svg" alt="" />
+							</button>
+							<h2 class="filters__title">
+								<img src="@img/arrow-filter.svg" alt="" />
+								<span>Фильтры</span>
+							</h2>
+							<form action="#" class="filters__form">
+								<div data-spollers class="filters__spollers">
+									<div class="filters__filter">
+										<details data-open class="filters__item filter">
+											<summary class="filter__title-wrapper">
+												<span class="filter__title">Цена, руб</span>
+												<span class="filter__arrow">
+													<img src="@img/arrow-filter.svg" alt="" />
+												</span>
+											</summary>
+											<div class="filter__body range">
+												<div class="filter__actions">
+													<div class="filter__val">
+														от <span class="filter__val-low">30000</span> до
+														<span class="filter__val-max">150000</span> руб.
+													</div>
+												</div>
+												<div class="range__value">
+													<span class="range__text">от</span>
+													<div class="range__field-val" id="lower-cost"></div>
+													<span class="range__text">руб.</span>
+												</div>
+												<div class="range__value">
+													<span class="range__text">до</span>
+													<div class="range__field-val" id="upper-cost"></div>
+													<span class="range__text">руб.</span>
+												</div>
+												<div class="range__slider" id="range01"></div>
+											</div>
+										</details>
+									</div>
+
+									<div class="filters__filter">
+										<details
+											data-open
+											class="filters__item filters__item_manufacturer filter"
+										>
+											<summary class="filter__title-wrapper _spoller-active">
+												<span class="filter__title">Вид изделия</span>
+												<span class="filter__arrow">
+													<img src="@img/arrow-filter.svg" alt="" />
+												</span>
+											</summary>
+											<div class="filter__body">
+												<!-- <div data-showmore="items" class="filter__showmore"> -->
+												<ul class="filter__list">
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_1_1"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Брюки"
+																name="form[]"
+															/>
+															<label for="f_1_1" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Брюки</span></label
+															>
+														</div>
+													</li>
+													<li class="filter__list-item filter__list-item_disabled">
+														<div class="checkbox">
+															<input
+																id="f_1_2"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Жилет"
+																name="form[]"
+															/>
+															<label for="f_1_2" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Жилет</span></label
+															>
+														</div>
+													</li>
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_1_3"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Костюм"
+																name="form[]"
+															/>
+															<label for="f_1_3" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Костюм</span></label
+															>
+														</div>
+													</li>
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_1_4"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Куртка"
+																name="form[]"
+															/>
+															<label for="f_1_4" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Куртка</span></label
+															>
+														</div>
+													</li>
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_1_5"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Полукомбинезон"
+																name="form[]"
+															/>
+															<label for="f_1_5" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Полукомбинезон</span></label
+															>
+														</div>
+													</li>
+												</ul>
+												<!-- <button hidden data-showmore-button type="button" class="filter__more"><span>отобразить всё</span><span>Спрятать</span></button> -->
+												<!-- </div> -->
+											</div>
+										</details>
+									</div>
+
+									<div class="filters__filter">
+										<details
+											data-open
+											class="filters__item filters__item_manufacturer filter"
+										>
+											<summary class="filter__title-wrapper _spoller-active">
+												<span class="filter__title">Сезон</span>
+												<span class="filter__arrow">
+													<img src="@img/arrow-filter.svg" alt="" />
+												</span>
+											</summary>
+											<div class="filter__body">
+												<ul class="filter__list">
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_2"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Зима"
+																name="form[]"
+															/>
+															<label for="f_2" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Зима</span></label
+															>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</details>
+									</div>
+
+									<div class="filters__filter">
+										<details
+											data-open
+											class="filters__item filters__item_manufacturer filter"
+										>
+											<summary class="filter__title-wrapper _spoller-active">
+												<span class="filter__title">Торговая марка / Бренд</span>
+												<span class="filter__arrow">
+													<img src="@img/arrow-filter.svg" alt="" />
+												</span>
+											</summary>
+											<div class="filter__body">
+												<ul class="filter__list">
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_3"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="СИРИУС"
+																name="form[]"
+															/>
+															<label for="f_3" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">СИРИУС</span></label
+															>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</details>
+									</div>
+
+									<div class="filters__filter">
+										<details
+											data-open
+											class="filters__item filters__item_manufacturer filter"
+										>
+											<summary class="filter__title-wrapper _spoller-active">
+												<span class="filter__title">Пол</span>
+												<span class="filter__arrow">
+													<img src="@img/arrow-filter.svg" alt="" />
+												</span>
+											</summary>
+											<div class="filter__body">
+												<ul class="filter__list">
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_4_1"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="СИРИУС"
+																name="form[]"
+															/>
+															<label for="f_4_1" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Женский </span></label
+															>
+														</div>
+													</li>
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_4_2"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="СИРИУС"
+																name="form[]"
+															/>
+															<label for="f_4_2" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Мужской</span></label
+															>
+														</div>
+													</li>
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_4_3"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="СИРИУС"
+																name="form[]"
+															/>
+															<label for="f_4_3" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Универсальный</span></label
+															>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</details>
+									</div>
+
+									<div class="filters__filter">
+										<details
+											data-open
+											class="filters__item filters__item_manufacturer filter"
+										>
+											<summary class="filter__title-wrapper _spoller-active">
+												<span class="filter__title">Состав</span>
+												<span class="filter__arrow">
+													<img src="@img/arrow-filter.svg" alt="" />
+												</span>
+											</summary>
+											<div class="filter__body">
+												<ul class="filter__list">
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_5_1"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Брюки"
+																name="form[]"
+															/>
+															<label for="f_5_1" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Брюки</span></label
+															>
+														</div>
+													</li>
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_5_2"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Жилет"
+																name="form[]"
+															/>
+															<label for="f_5_2" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Жилет</span></label
+															>
+														</div>
+													</li>
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_5_3"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Костюм"
+																name="form[]"
+															/>
+															<label for="f_5_3" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Костюм</span></label
+															>
+														</div>
+													</li>
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_5_4"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Куртка"
+																name="form[]"
+															/>
+															<label for="f_5_4" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Куртка</span></label
+															>
+														</div>
+													</li>
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_5_5"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Полукомбинезон"
+																name="form[]"
+															/>
+															<label for="f_5_5" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Полукомбинезон</span></label
+															>
+														</div>
+													</li>
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_5_6"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Полукомбинезон"
+																name="form[]"
+															/>
+															<label for="f_5_6" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Полукомбинезон</span></label
+															>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</details>
+									</div>
+
+									<div class="filters__filter">
+										<details
+											data-open
+											class="filters__item filters__item_manufacturer filter"
+										>
+											<summary class="filter__title-wrapper _spoller-active">
+												<span class="filter__title">Ткань/Материал верха</span>
+												<span class="filter__arrow">
+													<img src="@img/arrow-filter.svg" alt="" />
+												</span>
+											</summary>
+											<div class="filter__body">
+												<ul class="filter__list">
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_6_1"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Брюки"
+																name="form[]"
+															/>
+															<label for="f_6_1" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Брюки</span></label
+															>
+														</div>
+													</li>
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_6_2"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Жилет"
+																name="form[]"
+															/>
+															<label for="f_6_2" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Жилет</span></label
+															>
+														</div>
+													</li>
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_6_3"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Костюм"
+																name="form[]"
+															/>
+															<label for="f_6_3" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Костюм</span></label
+															>
+														</div>
+													</li>
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_6_4"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Куртка"
+																name="form[]"
+															/>
+															<label for="f_6_4" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Куртка</span></label
+															>
+														</div>
+													</li>
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_6_5"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Полукомбинезон"
+																name="form[]"
+															/>
+															<label for="f_6_5" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Полукомбинезон</span></label
+															>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</details>
+									</div>
+
+									<div class="filters__filter">
+										<details
+											data-open
+											class="filters__item filters__item_manufacturer filter"
+										>
+											<summary class="filter__title-wrapper _spoller-active">
+												<span class="filter__title">Утеплитель</span>
+												<span class="filter__arrow">
+													<img src="@img/arrow-filter.svg" alt="" />
+												</span>
+											</summary>
+											<div class="filter__body">
+												<ul class="filter__list">
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_7_1"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Брюки"
+																name="form[]"
+															/>
+															<label for="f_7_1" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Брюки</span></label
+															>
+														</div>
+													</li>
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_7_2"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Жилет"
+																name="form[]"
+															/>
+															<label for="f_7_2" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Жилет</span></label
+															>
+														</div>
+													</li>
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_7_3"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Костюм"
+																name="form[]"
+															/>
+															<label for="f_7_3" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Костюм</span></label
+															>
+														</div>
+													</li>
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_7_4"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Куртка"
+																name="form[]"
+															/>
+															<label for="f_6_4" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Куртка</span></label
+															>
+														</div>
+													</li>
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_7_5"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Полукомбинезон"
+																name="form[]"
+															/>
+															<label for="f_6_5" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Полукомбинезон</span></label
+															>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</details>
+									</div>
+
+									<div class="filters__filter">
+										<details
+											data-open
+											class="filters__item filters__item_manufacturer filter"
+										>
+											<summary class="filter__title-wrapper _spoller-active">
+												<span class="filter__title">Назначение</span>
+												<span class="filter__arrow">
+													<img src="@img/arrow-filter.svg" alt="" />
+												</span>
+											</summary>
+											<div class="filter__body">
+												<ul class="filter__list">
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_8_1"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Брюки"
+																name="form[]"
+															/>
+															<label for="f_8_1" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Брюки</span></label
+															>
+														</div>
+													</li>
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_8_2"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Жилет"
+																name="form[]"
+															/>
+															<label for="f_8_2" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Жилет</span></label
+															>
+														</div>
+													</li>
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_8_3"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Костюм"
+																name="form[]"
+															/>
+															<label for="f_8_3" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Костюм</span></label
+															>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</details>
+									</div>
+
+									<div class="filters__filter">
+										<details
+											data-open
+											class="filters__item filters__item_manufacturer filter"
+										>
+											<summary class="filter__title-wrapper _spoller-active">
+												<span class="filter__title">Цвет</span>
+												<span class="filter__arrow">
+													<img src="@img/arrow-filter.svg" alt="" />
+												</span>
+											</summary>
+											<div class="filter__body">
+												<ul class="filter__list">
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_9_1"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Бирюзовый"
+																name="form[]"
+															/>
+															<label for="f_9_1" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Бирюзовый</span></label
+															>
+														</div>
+													</li>
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_9_2"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Васильковый"
+																name="form[]"
+															/>
+															<label for="f_9_2" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Васильковый</span></label
+															>
+														</div>
+													</li>
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_9_3"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Красный"
+																name="form[]"
+															/>
+															<label for="f_9_3" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Красный</span></label
+															>
+														</div>
+													</li>
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_9_4"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Лимнонный"
+																name="form[]"
+															/>
+															<label for="f_9_4" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Лимнонный</span></label
+															>
+														</div>
+													</li>
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_9_5"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Олива"
+																name="form[]"
+															/>
+															<label for="f_9_5" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Олива</span></label
+															>
+														</div>
+													</li>
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_9_6"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Оранжевый"
+																name="form[]"
+															/>
+															<label for="f_9_6" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Оранжевый</span></label
+															>
+														</div>
+													</li>
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_9_7"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Серый"
+																name="form[]"
+															/>
+															<label for="f_9_7" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Серый</span></label
+															>
+														</div>
+													</li>
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_9_8"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Синий"
+																name="form[]"
+															/>
+															<label for="f_9_8" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Синий</span></label
+															>
+														</div>
+													</li>
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_9_9"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Черный, красный"
+																name="form[]"
+															/>
+															<label for="f_9_9" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Черный, красный</span></label
+															>
+														</div>
+													</li>
+													<li class="filter__list-item">
+														<div class="checkbox">
+															<input
+																id="f_9_10"
+																data-error="Ошибка"
+																class="checkbox__input"
+																type="checkbox"
+																value="Черный"
+																name="form[]"
+															/>
+															<label for="f_9_10" class="checkbox__label">
+																<span class="checkbox__body"></span>
+																<span class="checkbox__text">Черный</span></label
+															>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</details>
+									</div>
+								</div>
+								<div class="filters__controls">
+									<button type="button" class="filters__view">
+										Показать (<span>123</span>)
+									</button>
+									<button type="button" class="filters__reset">Сбросить</button>
+								</div>
+							</form>
+						</aside>
+						<div class="master__products">
+							<div class="products__wrapper">
+								<article class="product">
+									<a href="#" target="_blank" class="product__img">
+										<img class="ibg" src="@img/01.png" alt="01" />
+									</a>
+									<div class="product__content">
+										<span class="product__number">Арт 1232425</span>
+										<h3 class="product__title">
+											1Костюм "СИРИУС-Горка" куртка, брюки (гражданские размеры) КМФ
+											Мультикам
+										</h3>
+										<div class="product__costs costs">
+											<div class="costs__wholesale">Опт 3144 ₽</div>
+											<div class="costs__retail">Розница 4235 ₽</div>
+										</div>
+									</div>
+									<div class="product__actions">
+										<button data-popup="#add" class="product__action">В корзину</button>
+										<button class="product__action">
+											<svg
+												class="product__favorite"
+												width="20"
+												height="20"
+												viewBox="0 0 20 20"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M17.3667 3.84172C16.941 3.41589 16.4357 3.0781 15.8795 2.84763C15.3232 2.61716 14.7271 2.49854 14.125 2.49854C13.5229 2.49854 12.9268 2.61716 12.3705 2.84763C11.8143 3.0781 11.309 3.41589 10.8833 3.84172L10 4.72506L9.11666 3.84172C8.25692 2.98198 7.09086 2.49898 5.875 2.49898C4.65914 2.49898 3.49307 2.98198 2.63333 3.84172C1.77359 4.70147 1.29059 5.86753 1.29059 7.08339C1.29059 8.29925 1.77359 9.46531 2.63333 10.3251L3.51666 11.2084L10 17.6917L16.4833 11.2084L17.3667 10.3251C17.7925 9.89943 18.1303 9.39407 18.3608 8.83785C18.5912 8.28164 18.7099 7.68546 18.7099 7.08339C18.7099 6.48132 18.5912 5.88514 18.3608 5.32893C18.1303 4.77271 17.7925 4.26735 17.3667 3.84172V3.84172Z"
+													stroke="#A0A4A8"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+												/>
+											</svg>
+										</button>
+									</div>
+								</article>
+								<article class="product">
+									<a href="#" target="_blank" class="product__img">
+										<img class="ibg" src="@img/02.png" alt="02" />
+									</a>
+									<div class="product__content">
+										<span class="product__number">Арт 1232425</span>
+										<h3 class="product__title">
+											2Костюм "СИРИУС-Горка" куртка, брюки (гражданские размеры) КМФ
+											Мультикам
+										</h3>
+										<div class="product__costs costs">
+											<div class="costs__wholesale">Опт 3144 ₽</div>
+											<div class="costs__retail">Розница 4235 ₽</div>
+										</div>
+									</div>
+									<div class="product__actions">
+										<button data-popup="#add" class="product__action">В корзину</button>
+										<button class="product__action">
+											<svg
+												class="product__favorite"
+												width="20"
+												height="20"
+												viewBox="0 0 20 20"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M17.3667 3.84172C16.941 3.41589 16.4357 3.0781 15.8795 2.84763C15.3232 2.61716 14.7271 2.49854 14.125 2.49854C13.5229 2.49854 12.9268 2.61716 12.3705 2.84763C11.8143 3.0781 11.309 3.41589 10.8833 3.84172L10 4.72506L9.11666 3.84172C8.25692 2.98198 7.09086 2.49898 5.875 2.49898C4.65914 2.49898 3.49307 2.98198 2.63333 3.84172C1.77359 4.70147 1.29059 5.86753 1.29059 7.08339C1.29059 8.29925 1.77359 9.46531 2.63333 10.3251L3.51666 11.2084L10 17.6917L16.4833 11.2084L17.3667 10.3251C17.7925 9.89943 18.1303 9.39407 18.3608 8.83785C18.5912 8.28164 18.7099 7.68546 18.7099 7.08339C18.7099 6.48132 18.5912 5.88514 18.3608 5.32893C18.1303 4.77271 17.7925 4.26735 17.3667 3.84172V3.84172Z"
+													stroke="#A0A4A8"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+												/>
+											</svg>
+										</button>
+									</div>
+								</article>
+							</div>
+							<button type="button" class="products__button-more">Показать еще</button>
+							<div class="products__pagination pagination">
+								<div class="pagination__item">
+									<img src="@img/arrow-bottom-products.svg" alt="Назад" />
+								</div>
+								<div class="pagination__item pagination__item_current">1</div>
+								<div class="pagination__item">2</div>
+								<div class="pagination__item">3</div>
+								<div class="pagination__item">4</div>
+								<div class="pagination__item pagination__item_all">Все</div>
+								<div class="pagination__item">
+									<img src="@img/arrow-bottom-products.svg" alt="Вперёд" />
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
-		@@include('html/_js.htm',{})
+		@@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
 	</body>
 </html>

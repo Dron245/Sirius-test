@@ -12,8 +12,11 @@
 }
 
 @mixin adimg {
-	width: 100%;
+	img {
+		width: 100%;
 	height: auto;
+	}
+	
 }
 //Percent
 @function percent($px, $from: 100) {

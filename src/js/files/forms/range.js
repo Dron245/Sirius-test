@@ -5,32 +5,33 @@ import * as noUiSlider from 'nouislider';
 // в файле scss/forms/forms.scss
 
 // Подключение стилей с node_modules
-import 'nouislider/dist/nouislider.css';
+// import 'nouislider/dist/nouislider.css';
 
 export function rangeInit() {
 	const priceSlider = document.querySelector('#range');
 	if (priceSlider) {
-		let textFrom = priceSlider.getAttribute('data-from');
-		let textTo = priceSlider.getAttribute('data-to');
 		noUiSlider.create(priceSlider, {
-			start: 0, // [0,200000]
-			connect: [true, false],
+			start:  [86,100000],
+			connect: [false, true, false],
 			range: {
 				'min': [0],
-				'max': [200000]
+				'max': [180000]
 			},
-			/*
+			
 			format: wNumb({
-				decimals: 0
+				decimals: 0,
+				thousand: ' '
 			})
-			*/
+			
 		});
-		/*
-		const priceStart = document.getElementById('price-start');
-		const priceEnd = document.getElementById('price-end');
-		priceStart.addEventListener('change', setPriceValues);
-		priceEnd.addEventListener('change', setPriceValues);
-		*/
+		priceSlider.noUiSlider.on('update', function (values, handle) {
+			if (handle) {
+				document.querySelector('.filter__val-max').innerHTML = values[handle];
+		  } else {
+				document.querySelector('.filter__val-low').innerHTML = values[handle];
+		  }
+		})
+	
 		function setPriceValues() {
 			let priceStartValue;
 			let priceEndValue;

@@ -29,14 +29,14 @@
 			width: 9px;
 			height: 1px;
 		}
-		@media (any-hover: hover) {
-			&:hover {
-				&::before,
-				&::after {
-					background-color: rgba(0, 0, 0, 0.5);
-				}
-			}
-		}
+		// @media (any-hover: hover) {
+		// 	&:hover {
+		// 		&::before,
+		// 		&::after {
+		// 			background-color: rgba(0, 0, 0, 0.5);
+		// 		}
+		// 	}
+		// }
 		// .quantity__button_plus
 		&--plus {
 			&::before {

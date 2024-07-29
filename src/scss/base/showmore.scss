@@ -1,8 +1,13 @@
 [data-showmore] {
+	margin-bottom: toRem(30);
 }
 [data-showmore-content] {
+	display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 [data-showmore-button] {
+	@extend .tags__item;
 	span {
 		&:last-child {
 			display: none;

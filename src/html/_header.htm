@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <header class="header">
 	<div class="header__container">
 		<div class="header__top">
@@ -15,7 +17,9 @@
 			</div>
 			<div class="header__search search">
 				<form action="#" class="search__wrapper">
-					<img src="@img/header/search.svg" alt="Поиск" />
+					<button class="search__button" type="button">
+						<img src="@img/header/search.svg" alt="Поиск" />
+					</button>
 					<input
 						id="search"
 						autocomplete="off"
@@ -58,10 +62,10 @@
 			</div>
 		</div>
 		<div class="header__bottom">
-			<div data-da=".header__top, 767.99,0" class="header__catalog catalog">
-				<div class="catalog__img"><img src="@img/header/menu.svg" alt="Меню" /></div>
+			<a href="#" data-da=".header__top, 767.99,0" class="header__catalog catalog">
+				<button type="button" class="catalog__img"><img src="@img/header/menu.svg" alt="Меню" /></button>
 				<span class="catalog__text">Каталог</span>
-			</div>
+			</a>
 			<div class="header__menu menu">
 				<button type="button" class="menu__icon icon-menu"><span></span></button>
 				<nav class="menu__body">
@@ -85,11 +89,11 @@
 			<div data-da=".header__top, 767.99" class="header__actions actions">
 				<a href="#" class="actions__item actions__item_link">
 					<img src="@img/header/favorite.svg" alt="Избранное" />
-					<span class="actions__quantiy">0</span>
+					<span class="actions__quantity">0</span>
 				</a>
 				<a href="#" class="actions__item actions__item_link">
 					<img src="@img/header/cart.svg" alt="Корзина" />
-					<span class="actions__quantiy">0</span>
+					<span id="quantity" class="actions__quantity">0</span>
 				</a>
 				<a href="#" class="actions__item">
 					<img src="@img/header/user.svg" alt="Корзина" />

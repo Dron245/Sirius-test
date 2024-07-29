@@ -13,16 +13,20 @@
 		// width: 100%;
 		display: flex;
 
-		column-gap: 2.8125%; /* 36/1280 */
+		column-gap: 2.8125%;
+
+		/* 36/1280 */
 		// justify-content: space-between;
 		@media (max-width: 1310px) {
 			column-gap: toRem(15);
 		}
+
 		@media (max-width: 915px) {
 			flex-wrap: wrap;
 			row-gap: 10px;
 			justify-content: space-between;
 		}
+
 		@media (max-width: $mobile) {
 			justify-content: flex-start;
 			align-items: stretch;
@@ -37,76 +41,97 @@
 	}
 
 	&__city {
-		flex: 0 0 11.09375%; /* 142/1280 */
+		flex: 0 0 11.09375%;
+
+		/* 142/1280 */
 		@media (max-width: 1220px) {
 			flex: 0 0 15%;
 		}
+
 		@media (max-width: 915px) {
 			flex: 0 0 25%;
 		}
+
 		@media (max-width: $mobile) {
 			display: none;
 		}
 	}
 
 	&__search {
-		flex: 0 0 29.0625%; /* 372/1280 */
+		flex: 0 0 29.0625%;
+
+		/* 372/1280 */
 		@media (max-width: 1310px) {
 			flex: 0 0 25%;
 		}
+
 		@media (max-width: $tablet) {
 			// flex: 0 0 40%;
 			@include adaptiveValue("flex-basis", 400, 100, 0, 992, 320);
 		}
+
 		@media (max-width: $mobile) {
 			display: none;
 		}
 	}
 
 	&__mode {
-		flex: 0 0 8.90625%; /* 114/1280 */
+		flex: 0 0 8.90625%;
+
+		/* 114/1280 */
 		@media (max-width: 1310px) {
 			flex: 0 0 12%;
 		}
+
 		@media (max-width: $tablet) {
 			display: none;
 		}
+
 		@media (max-width: $mobile) {
 			display: none;
 		}
 	}
 
 	&__social {
-		flex: 0 0 7.1875%; /* 92/1280 */
+		flex: 0 0 7.1875%;
+
+		/* 92/1280 */
 		@media (max-width: 1130px) {
 			display: none;
 		}
+
 		@media (max-width: $mobile) {
 			display: none;
 		}
 	}
 
 	&__contacts {
-		flex: 0 0 22.34375%; /* 286/1280 */
+		flex: 0 0 22.34375%;
+		/* 286/1280 */
 		display: flex;
 		justify-content: space-between;
+
 		@media (max-width: 1310px) {
 			margin-left: auto;
 		}
+
 		@media (max-width: 1310px) {
-			justify-content: space-between;
+			// justify-content: space-between;
 			// margin-left: initial;
 			flex: initial;
 		}
+
 		@media (max-width: $tablet) {
-			justify-content: space-between;
+			// justify-content: space-between;
 			width: 100%;
 		}
+
 		@media (max-width: 915px) {
 			justify-content: flex-start;
 			gap: 30px;
 			margin-bottom: 20px;
 		}
+
 		@media (max-width: $mobile) {
 			display: none;
 		}
@@ -116,6 +141,7 @@
 		display: flex;
 		// align-items: center;
 		position: relative;
+
 		// z-index: 2;
 		&::after {
 			content: "";
@@ -135,18 +161,19 @@
 		gap: 4px;
 		background-color: $secondRed;
 		padding: 12px toRem(21);
+
 		@media (max-width: $mobile) {
 			margin-left: -10px;
 		}
 	}
 
-	&__menu {
-	}
+	&__menu {}
 
 	&__actions {
 		margin-left: auto;
 	}
 }
+
 .city {
 	&__text {
 		font-size: 0.75rem;
@@ -154,8 +181,7 @@
 		color: #828282;
 	}
 
-	&__current {
-	}
+	&__current {}
 
 	&__img {
 		display: flex;
@@ -171,15 +197,17 @@
 		text-decoration: underline dashed $secondRed;
 	}
 }
+
 .search {
 	&__wrapper {
 		position: relative;
-		img {
-			position: absolute;
-			right: 0.75rem;
-			top: 50%;
-			transform: translateY(-50%);
-		}
+	}
+
+	&__button {
+		position: absolute;
+		right: 0.75rem;
+		top: 50%;
+		transform: translateY(-50%);
 	}
 
 	&__input {
@@ -202,6 +230,7 @@
 		color: #828282;
 	}
 }
+
 .social {
 	&__item {
 		// display: inline-block;
@@ -214,13 +243,15 @@
 		}
 	}
 }
+
 .contacts {
 	&__item {
-		@media (min-width:$tablet){
-			 &:not(:last-child) {
+		@media (min-width:$tablet) {
+			&:not(:last-child) {
 				margin-right: 15px;
-			 } 
+			}
 		}
+
 		@media (max-width: $tablet) {
 			display: flex;
 			flex-direction: column;
@@ -247,32 +278,30 @@
 		color: #eb4747;
 	}
 }
+
 .catalog {
-	&__img {
-	}
+	&__img {}
 
 	&__text {
 		font-weight: 500;
 		font-size: 14px;
 		line-height: 114%;
 		color: #fff;
+
 		@media (max-width: $mobile) {
 			display: none;
 		}
 	}
 }
+
 .menu {
-	&__icon {
-	}
+	&__icon {}
 
-	&__body {
-	}
+	&__body {}
 
-	&__list {
-	}
+	&__list {}
 
-	&__item {
-	}
+	&__item {}
 
 	&__link {
 		&_other {
@@ -287,11 +316,13 @@
 		}
 	}
 }
-.icon-menu {
-}
+
+.icon-menu {}
+
 .actions {
 	display: flex;
 	align-items: center;
+
 	// gap: 24px;
 	&__item {
 		// padding: 12px;
@@ -299,6 +330,7 @@
 		display: flex;
 		align-items: center;
 		gap: 5px;
+
 		&_link {
 			width: 48px;
 			flex: 0 0 48px;
@@ -306,7 +338,7 @@
 		}
 	}
 
-	&__quantiy {
+	&__quantity {
 		position: absolute;
 		top: 8px;
 		right: 20px;
@@ -323,6 +355,7 @@
 	&__text {
 		font-size: 14px;
 		color: $mainRed;
+
 		@media (max-width: $mobile) {
 			display: none;
 		}

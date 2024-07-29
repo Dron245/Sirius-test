@@ -268,18 +268,15 @@
 		box-shadow: 0 0 20px 0 rgba(37, 40, 43, 0.2);
 	}
 
-	@media (max-width:$tablet) {
+	@media (max-width:$tablet) and (min-width:$mobile) {
 		flex: 0 0 33.333%;
-		// flex-wrap: wrap;
 	}
 
-	@media (max-width:$mobile) {
+	@media (max-width:$mobile) and (min-width: 380px) {
 		 flex: 0 0 50%; 
 	}
 
-	@media (max-width:$mobileSmall) {
-		// flex: 0 0 50%;
-	}
+
 
 	@media (max-width: 380px) {
 		flex: 0 0 100%;
